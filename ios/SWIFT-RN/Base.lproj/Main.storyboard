@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ms6-sj-qT1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="3Qt-BP-i4u">
+            <objects>
+                <viewController id="yiA-Ko-RCh" customClass="ReadViewController" customModule="SWIFT_RN" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Ix-JP-ydb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Получение данных передаваемых из RN через ключ &quot;segue&quot; в UserDefaults" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6d-ol-XRa">
+                                <rect key="frame" x="16" y="293.5" width="343" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="mR6-Jr-28s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Neb-fv-U4i">
+                                <rect key="frame" x="16" y="86" width="343" height="30"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="n3G-Jb-sr5"/>
+                                </constraints>
+                                <state key="normal" title="Read"/>
+                                <connections>
+                                    <action selector="readButtonClick:" destination="yiA-Ko-RCh" eventType="touchUpInside" id="Sfg-o6-WiL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="значение" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxV-G9-TfB">
+                                <rect key="frame" x="16" y="40" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1V4-ez-7Ma"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Neb-fv-U4i" firstAttribute="top" secondItem="lxV-G9-TfB" secondAttribute="bottom" constant="16" id="3Ps-4t-Zsc"/>
+                            <constraint firstItem="C6d-ol-XRa" firstAttribute="leading" secondItem="fr6-bd-VpW" secondAttribute="leading" constant="16" id="IH9-rq-ve8"/>
+                            <constraint firstItem="fr6-bd-VpW" firstAttribute="trailing" secondItem="C6d-ol-XRa" secondAttribute="trailing" constant="16" id="JWZ-n9-70U"/>
+                            <constraint firstItem="Neb-fv-U4i" firstAttribute="leading" secondItem="fr6-bd-VpW" secondAttribute="leading" constant="16" id="N2p-m3-NGO"/>
+                            <constraint firstItem="fr6-bd-VpW" firstAttribute="trailing" secondItem="Neb-fv-U4i" secondAttribute="trailing" constant="16" id="QMK-jT-sVn"/>
+                            <constraint firstItem="fr6-bd-VpW" firstAttribute="trailing" secondItem="lxV-G9-TfB" secondAttribute="trailing" constant="16" id="UZP-id-svH"/>
+                            <constraint firstItem="lxV-G9-TfB" firstAttribute="top" secondItem="fr6-bd-VpW" secondAttribute="top" constant="20" id="d7L-gV-qj4"/>
+                            <constraint firstItem="lxV-G9-TfB" firstAttribute="leading" secondItem="fr6-bd-VpW" secondAttribute="leading" constant="16" id="gs4-HM-sNr"/>
+                            <constraint firstItem="C6d-ol-XRa" firstAttribute="centerY" secondItem="1Ix-JP-ydb" secondAttribute="centerY" id="lfY-zO-eET"/>
+                            <constraint firstItem="C6d-ol-XRa" firstAttribute="centerX" secondItem="1Ix-JP-ydb" secondAttribute="centerX" id="sQR-ga-gge"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fr6-bd-VpW"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="lA6-G5-1xm"/>
+                    <navigationItem key="navigationItem" title="Title" id="2Jy-uy-8Eu">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="7au-N9-FI0">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="56b-iL-Ypj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textLabel" destination="lxV-G9-TfB" id="ios-FI-4ft"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eka-q1-d5t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-417" y="412"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="0mK-88-553">
+            <objects>
+                <tabBarController id="Ms6-sj-qT1" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ey4-VE-BnH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="c2b-xs-h9P" kind="relationship" relationship="viewControllers" id="qmF-Id-4rC"/>
+                        <segue destination="yiA-Ko-RCh" kind="relationship" relationship="viewControllers" id="WHa-SC-6Sa"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="mXC-Ec-NFx"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1dw-EJ-163" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1103" y="-346"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="J5o-ik-gIl">
+            <objects>
+                <viewController storyboardIdentifier="rn-screen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="U4G-yo-xrK" customClass="ViewController" customModule="SWIFT_RN" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Dm-hz-VGJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="tc2-7f-l42"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ko-mD-N3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1787" y="411"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="hNh-un-3ms">
+            <objects>
+                <viewController id="c2b-xs-h9P" customClass="SegueViewController" customModule="SWIFT_RN" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u5r-H8-YgX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0L-gX-I9W">
+                                <rect key="frame" x="114.5" y="318.5" width="146" height="30"/>
+                                <state key="normal" title="GO TO RN PROJECT "/>
+                                <connections>
+                                    <action selector="goButtonClick:" destination="c2b-xs-h9P" eventType="touchUpInside" id="E3z-cw-xKx"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="frs-1l-Hym">
+                                <rect key="frame" x="16" y="184" width="343" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="26y-ZQ-CyP"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                </segments>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cq0-OZ-5xn">
+                                <rect key="frame" x="16" y="40" width="343" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="YlR-jg-oth"/>
+                                </constraints>
+                                <string key="text">Переход в часть, написанную на RN. В коде RN должен происходить переход на экран c  номером выбранного сегмента. Номер сегмента записывается в UserDefaults как String</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="66Q-WJ-WU9" firstAttribute="trailing" secondItem="cq0-OZ-5xn" secondAttribute="trailing" constant="16" id="4Zj-FB-Ul1"/>
+                            <constraint firstItem="cq0-OZ-5xn" firstAttribute="top" secondItem="66Q-WJ-WU9" secondAttribute="top" constant="20" id="8LJ-iS-Qu0"/>
+                            <constraint firstItem="66Q-WJ-WU9" firstAttribute="trailing" secondItem="frs-1l-Hym" secondAttribute="trailing" constant="16" id="GIk-F4-oQf"/>
+                            <constraint firstItem="cq0-OZ-5xn" firstAttribute="leading" secondItem="66Q-WJ-WU9" secondAttribute="leading" constant="16" id="H0T-tI-NuF"/>
+                            <constraint firstItem="frs-1l-Hym" firstAttribute="leading" secondItem="66Q-WJ-WU9" secondAttribute="leading" constant="16" id="QX6-2t-TFe"/>
+                            <constraint firstItem="g0L-gX-I9W" firstAttribute="centerX" secondItem="u5r-H8-YgX" secondAttribute="centerX" id="XSK-AH-XKx"/>
+                            <constraint firstItem="g0L-gX-I9W" firstAttribute="centerY" secondItem="u5r-H8-YgX" secondAttribute="centerY" id="b87-o1-3po"/>
+                            <constraint firstItem="frs-1l-Hym" firstAttribute="top" secondItem="cq0-OZ-5xn" secondAttribute="bottom" constant="16" id="jMu-8D-Pcy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="66Q-WJ-WU9"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="MyO-EY-p3l"/>
+                    <navigationItem key="navigationItem" id="LZP-0s-jRO">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="Jx9-j9-azZ">
+                            <connections>
+                                <segue destination="yiA-Ko-RCh" kind="show" id="eJQ-6f-ELc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="segment" destination="frs-1l-Hym" id="Isb-t2-xxs"/>
+                        <segue destination="cbE-uV-Ds4" kind="show" identifier="1" id="Puq-vj-xXp"/>
+                        <segue destination="cis-2y-KYt" kind="show" identifier="2" id="VSr-yR-eyK"/>
+                        <segue destination="38J-26-ti7" kind="show" identifier="3" id="nRD-55-0x9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C06-7d-Jzx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1138.4000000000001" y="411.544227886057"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WriteViewController" customModule="SWIFT_RN" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O05-vI-zuE">
+                                <rect key="frame" x="16" y="40" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezh-b0-1GW">
+                                <rect key="frame" x="16" y="86" width="343" height="30"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OzK-9X-n1g"/>
+                                </constraints>
+                                <state key="normal" title="Write"/>
+                                <connections>
+                                    <action selector="writeButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2GS-Oy-70X"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="запись данных типа string через ключ &quot;segue&quot; в UserDefaults Для чтения их в коде RN" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pf7-qP-wIh">
+                                <rect key="frame" x="16" y="293.5" width="343" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="r0x-RX-d2s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O05-vI-zuE" secondAttribute="trailing" constant="16" id="Kkh-rR-pAP"/>
+                            <constraint firstItem="pf7-qP-wIh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QtC-W6-OxR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ezh-b0-1GW" secondAttribute="trailing" constant="16" id="Tnp-aH-5Bz"/>
+                            <constraint firstItem="O05-vI-zuE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="VAn-Zy-3FB"/>
+                            <constraint firstItem="pf7-qP-wIh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dsL-Ms-sDg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pf7-qP-wIh" secondAttribute="trailing" constant="16" id="f9L-E2-2sg"/>
+                            <constraint firstItem="Ezh-b0-1GW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="nsT-Gv-WJr"/>
+                            <constraint firstItem="Ezh-b0-1GW" firstAttribute="top" secondItem="O05-vI-zuE" secondAttribute="bottom" constant="16" id="tao-oG-t3k"/>
+                            <constraint firstItem="O05-vI-zuE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ucE-pY-JGk"/>
+                            <constraint firstItem="pf7-qP-wIh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xcU-gk-OIp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="peK-yo-iJ1"/>
+                    <connections>
+                        <outlet property="textField" destination="O05-vI-zuE" id="yPC-qO-5Pl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="278" y="412"/>
+        </scene>
+        <!--Screen One View Controller-->
+        <scene sceneID="w7W-qE-F7D">
+            <objects>
+                <viewController id="cbE-uV-Ds4" customClass="ScreenOneViewController" customModule="SWIFT_RN" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I5j-T9-IYD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Экран 1 Вы перешли на этот экран из RN" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pDg-Ao-Tix">
+                                <rect key="frame" x="16" y="269" width="343" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="2AF-iy-76l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9F-3l-J1P">
+                                <rect key="frame" x="16" y="617" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0tJ-RW-zq1"/>
+                                </constraints>
+                                <state key="normal" title="Вернуться "/>
+                                <connections>
+                                    <action selector="backButton:" destination="cbE-uV-Ds4" eventType="touchUpInside" id="61Z-nm-gx6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5Oa-n3-wGF" firstAttribute="trailing" secondItem="p9F-3l-J1P" secondAttribute="trailing" constant="16" id="DHq-pE-pkn"/>
+                            <constraint firstItem="p9F-3l-J1P" firstAttribute="leading" secondItem="5Oa-n3-wGF" secondAttribute="leading" constant="16" id="GiV-kD-F27"/>
+                            <constraint firstItem="pDg-Ao-Tix" firstAttribute="centerX" secondItem="I5j-T9-IYD" secondAttribute="centerX" id="IRt-Cm-oaI"/>
+                            <constraint firstItem="pDg-Ao-Tix" firstAttribute="leading" secondItem="5Oa-n3-wGF" secondAttribute="leading" constant="16" id="Wne-uh-MjQ"/>
+                            <constraint firstItem="5Oa-n3-wGF" firstAttribute="bottom" secondItem="p9F-3l-J1P" secondAttribute="bottom" constant="20" id="XEL-l5-YFw"/>
+                            <constraint firstItem="5Oa-n3-wGF" firstAttribute="trailing" secondItem="pDg-Ao-Tix" secondAttribute="trailing" constant="16" id="aZf-Ae-Haw"/>
+                            <constraint firstItem="pDg-Ao-Tix" firstAttribute="centerY" secondItem="I5j-T9-IYD" secondAttribute="centerY" id="fB3-fP-esQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5Oa-n3-wGF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zDg-N3-7g8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1103" y="1405"/>
+        </scene>
+        <!--Screen Two View Controller-->
+        <scene sceneID="MnS-zr-hwF">
+            <objects>
+                <viewController id="cis-2y-KYt" customClass="ScreenTwoViewController" customModule="SWIFT_RN" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DYp-ZG-0q8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Экран 2 Вы перешли на этот экран из RN" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="R4U-DT-MBr">
+                                <rect key="frame" x="16" y="269" width="343" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="k9f-3T-9Dd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tii-iS-xwx">
+                                <rect key="frame" x="16" y="617" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="efe-yK-NQj"/>
+                                </constraints>
+                                <state key="normal" title="Вернуться "/>
+                                <connections>
+                                    <action selector="backButton:" destination="cis-2y-KYt" eventType="touchUpInside" id="YHi-jk-ovj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tii-iS-xwx" firstAttribute="leading" secondItem="Tj7-gG-bpF" secondAttribute="leading" constant="16" id="95N-Gv-rPi"/>
+                            <constraint firstItem="Tj7-gG-bpF" firstAttribute="trailing" secondItem="R4U-DT-MBr" secondAttribute="trailing" constant="16" id="9Ob-cg-WlR"/>
+                            <constraint firstItem="R4U-DT-MBr" firstAttribute="centerX" secondItem="DYp-ZG-0q8" secondAttribute="centerX" id="ChE-fu-zik"/>
+                            <constraint firstItem="R4U-DT-MBr" firstAttribute="centerY" secondItem="DYp-ZG-0q8" secondAttribute="centerY" id="FCP-Ka-Cmi"/>
+                            <constraint firstItem="Tj7-gG-bpF" firstAttribute="bottom" secondItem="tii-iS-xwx" secondAttribute="bottom" constant="20" id="bpd-of-mcK"/>
+                            <constraint firstItem="R4U-DT-MBr" firstAttribute="leading" secondItem="Tj7-gG-bpF" secondAttribute="leading" constant="16" id="nHw-9j-pIm"/>
+                            <constraint firstItem="Tj7-gG-bpF" firstAttribute="trailing" secondItem="tii-iS-xwx" secondAttribute="trailing" constant="16" id="oS1-a1-yFS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Tj7-gG-bpF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aBf-Wc-tDZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-418" y="1405"/>
+        </scene>
+        <!--Screen Three View Controller-->
+        <scene sceneID="bzh-MT-R1f">
+            <objects>
+                <viewController id="38J-26-ti7" customClass="ScreenThreeViewController" customModule="SWIFT_RN" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CUy-zK-XQM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Экран 2 Вы перешли на этот экран из RN" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eRL-Jo-AUi">
+                                <rect key="frame" x="16" y="269" width="343" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Xvu-yV-mjQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBB-fI-vi8">
+                                <rect key="frame" x="16" y="617" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="maY-ey-cau"/>
+                                </constraints>
+                                <state key="normal" title="Вернуться "/>
+                                <connections>
+                                    <action selector="backButton:" destination="38J-26-ti7" eventType="touchUpInside" id="zqN-io-Vc7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5Uf-ox-Xlx" firstAttribute="trailing" secondItem="dBB-fI-vi8" secondAttribute="trailing" constant="16" id="OZn-eE-0yT"/>
+                            <constraint firstItem="5Uf-ox-Xlx" firstAttribute="trailing" secondItem="eRL-Jo-AUi" secondAttribute="trailing" constant="16" id="T67-zM-Dxf"/>
+                            <constraint firstItem="eRL-Jo-AUi" firstAttribute="centerX" secondItem="CUy-zK-XQM" secondAttribute="centerX" id="Yr8-kJ-kTX"/>
+                            <constraint firstItem="eRL-Jo-AUi" firstAttribute="leading" secondItem="5Uf-ox-Xlx" secondAttribute="leading" constant="16" id="dqZ-LQ-Ir5"/>
+                            <constraint firstItem="dBB-fI-vi8" firstAttribute="leading" secondItem="5Uf-ox-Xlx" secondAttribute="leading" constant="16" id="e2s-gA-uBx"/>
+                            <constraint firstItem="5Uf-ox-Xlx" firstAttribute="bottom" secondItem="dBB-fI-vi8" secondAttribute="bottom" constant="20" id="sIw-zF-GXj"/>
+                            <constraint firstItem="eRL-Jo-AUi" firstAttribute="centerY" secondItem="CUy-zK-XQM" secondAttribute="centerY" id="zaH-J7-0pZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5Uf-ox-Xlx"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3HU-3U-qfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="278" y="1405"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="mXC-Ec-NFx"/>
+        <segue reference="WHa-SC-6Sa"/>
+    </inferredMetricsTieBreakers>
+</document>
